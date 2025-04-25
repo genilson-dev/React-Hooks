@@ -21,3 +21,6 @@
 npm-debug.log*
 yarn-debug.log*
 yarn-error.log*
+_Outro_Readme.md
+package-lock.json
+package.json
