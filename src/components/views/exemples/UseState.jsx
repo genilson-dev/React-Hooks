@@ -3,7 +3,8 @@ import PageTitle from "../../layout/PageTitle";
 import SectionTitle from "../../layout/SectionTitle";
 
 const UseState = (props) => {
-  const [count, setCount] = React.useState(10);
+  const [count, setCount] = React.useState(0); 
+  const [name, setName] = React.useState("");
   
   return (
     <div className="UseState">
@@ -17,12 +18,14 @@ const UseState = (props) => {
         <div>
         <button className="btn" onClick={() => setCount(count - 1)}>-1</button>
         <button className="btn" onClick={() => setCount(count + 1)}>+1</button>
-        {/* <button className="btn" onClick={() => setCount(current => current * 50)}> x 50</button> */}
+        <button className="btn" onClick={() => setCount(current => current * 100)}> 100</button>
         {/* <button className="btn" onClick={() => setCount(current => current - current * 50)}> - 50</button> */}
         {/* <button className="btn" onClick={() => setCount(current => 0)}> 0</button> */}
         </div>
       </div>
       <SectionTitle title="Exemplo 2" />
+      <input type="text" className="input" value={name} onChange={e => setName(e.target.value)}/>
+      <span className="text">{name}</span>
     </div>
   );
 };
